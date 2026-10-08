@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Autoévaluation Big Data — Hadoop & HDFS, première partie du chapitre 2." />
+  <title>Big Data — Autoévaluation Hadoop & HDFS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <div class="eyebrow">2. Hadoop, HDFS et MapReduce</div>
+        <div class="brand-title">Autoévaluation — Partie 1</div>
+      </div>
+      <div class="course-meta">
+        <a class="cv-link" href="https://www.doyoubuzz.com/takwa-ben-aicha-gder" target="_blank" rel="noopener noreferrer" aria-label="CV en ligne de Dr. Ing. Takwa Ben Aïcha Gader">Dr. Ing. Takwa Ben Aïcha Gader</a>
+        <span>Big Data · 2026/2027</span>
+      </div>
+    </header>
+
+    <main>
+      <section id="screen-start" class="screen active" aria-labelledby="start-title">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="section-tag">Comprendre · raisonner · appliquer</span>
+            <h1 id="start-title">Hadoop & HDFS : maîtrisez les idées, pas les phrases du cours</h1>
+
+            <div class="hero-metrics" aria-label="Informations sur le quiz">
+              <div><strong>30</strong><span>questions</span></div>
+              <div><strong>5</strong><span>axes de maîtrise</span></div>
+              <div><strong>≈ 20 min</strong><span>avec feedback</span></div>
+            </div>
+
+            <div class="start-notes">
+              <p><strong>Format :</strong> QCM à choix unique, difficulté progressive, feedback immédiat.</p>
+              <p><strong>Conseil :</strong> justifiez mentalement votre choix avant de valider.</p>
+            </div>
+
+            <button id="start-btn" class="btn btn-primary btn-large">Commencer l’autoévaluation</button>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <img src="assets/cluster.png" alt="" />
+          </div>
+        </div>
+
+        <div class="topic-strip" aria-label="Notions évaluées">
+          <span>Calcul distribué</span>
+          <span>Scale-up / Scale-out</span>
+          <span>HDFS</span>
+          <span>Réplication & pannes</span>
+          <span>Lecture / écriture</span>
+          <span>Data locality</span>
+          <span>Configuration & commandes</span>
+        </div>
+      </section>
+
+      <section id="screen-quiz" class="screen" aria-live="polite">
+        <div class="quiz-topbar">
+          <div class="progress-text">
+            <span id="question-counter">Question 1 / 30</span>
+            <span id="progress-percent">3 %</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <article class="question-card">
+          <div class="question-main">
+            <div class="question-kicker">
+              <span id="category-chip" class="category-chip"></span>
+              <span id="difficulty-chip" class="difficulty-chip"></span>
+            </div>
+
+            <p id="scenario" class="scenario"></p>
+            <h2 id="question-text"></h2>
+
+            <div id="answers" class="answers" role="radiogroup" aria-label="Réponses possibles"></div>
+
+            <div class="question-actions">
+              <button id="validate-btn" class="btn btn-primary" disabled>Valider ma réponse</button>
+              <button id="next-btn" class="btn btn-secondary hidden">Question suivante</button>
+            </div>
+
+            <div id="feedback" class="feedback hidden" tabindex="-1">
+              <div class="feedback-title-row">
+                <span id="feedback-icon" class="feedback-icon"></span>
+                <strong id="feedback-title"></strong>
+              </div>
+              <p id="feedback-explanation"></p>
+              <p id="feedback-takeaway" class="takeaway"></p>
+            </div>
+          </div>
+
+          <aside id="question-visual" class="question-visual" aria-hidden="true">
+            <img id="question-image" src="" alt="" />
+          </aside>
+        </article>
+      </section>
+
+      <section id="screen-results" class="screen" aria-labelledby="results-title">
+        <div class="results-hero">
+          <div id="score-ring" class="score-ring">
+            <div class="score-ring-inner">
+              <strong id="score-percent">0%</strong>
+              <span id="score-raw">0 / 30</span>
+            </div>
+          </div>
+          <div class="results-copy">
+            <span class="section-tag">Bilan personnalisé</span>
+            <h1 id="results-title">Votre maîtrise de la partie Hadoop & HDFS</h1>
+            <p id="result-message" class="result-message"></p>
+          </div>
+        </div>
+
+        <div class="results-grid">
+          <section class="result-panel">
+            <h2>Maîtrise par notion</h2>
+            <div id="category-results" class="category-results"></div>
+          </section>
+
+          <section class="result-panel">
+            <h2>Priorités de révision</h2>
+            <div id="revision-advice" class="revision-advice"></div>
+          </section>
+        </div>
+
+        <div class="result-actions">
+          <button id="retry-errors-btn" class="btn btn-secondary">Revoir uniquement mes erreurs</button>
+          <button id="restart-btn" class="btn btn-primary">Recommencer les 30 questions</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Support d’autoévaluation — Chapitre 2, partie 1 · <a class="cv-link footer-cv-link" href="https://www.doyoubuzz.com/takwa-ben-aicha-gder" target="_blank" rel="noopener noreferrer">Dr. Ing. Takwa Ben Aïcha Gader</a></span>
+      <span>ISIMa · Big Data · 2026/2027</span>
+    </footer>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
